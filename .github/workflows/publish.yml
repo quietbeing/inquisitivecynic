@@ -1,0 +1,34 @@
+name: Publish Site from Notion
+
+on:
+  workflow_dispatch:  # Manual trigger — the "one-click" button
+
+jobs:
+  publish:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+
+      - uses: actions/setup-python@v5
+        with:
+          python-version: '3.12'
+
+      - name: Install dependencies
+        run: pip install requests
+
+      - name: Generate site from Notion
+        env:
+          NOTION_TOKEN: ${{ secrets.NOTION_TOKEN }}
+        run: python scripts/publish.py
+
+      - name: Commit and push
+        run: |
+          git config user.name "Paul Reeves"
+          git config user.email "dpreeves@gmail.com"
+          git add index.html
+          if git diff --cached --quiet; then
+            echo "No changes to commit"
+          else
+            git commit -m "Publish: update site from Notion $(date +%Y-%m-%d)"
+            git push
+          fi
