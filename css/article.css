@@ -1,0 +1,180 @@
+/* ============================================================
+   THE INQUISITIVECYNIC — article.css
+   Shared styles for Field Notes article pages.
+   Relies on design tokens from style.css.
+   ============================================================ */
+
+.article-wrap {
+  max-width: var(--content-narrow);
+  margin: 0 auto;
+  padding: var(--space-16) var(--space-6) var(--space-24);
+}
+
+.article-back {
+  display: inline-flex;
+  align-items: center;
+  gap: var(--space-2);
+  font-family: var(--font-sc);
+  font-size: var(--text-xs);
+  letter-spacing: 0.12em;
+  text-transform: uppercase;
+  color: var(--color-text-muted);
+  text-decoration: none;
+  margin-bottom: var(--space-10);
+  transition: color var(--transition);
+}
+.article-back:hover { color: var(--color-green); }
+
+.article-header { margin-bottom: var(--space-10); }
+
+.article-eyebrow {
+  font-family: var(--font-sc);
+  font-size: var(--text-xs);
+  letter-spacing: 0.18em;
+  text-transform: uppercase;
+  color: var(--color-green);
+  margin: 0 0 var(--space-4);
+}
+
+.article-title {
+  font-family: var(--font-display);
+  font-weight: 500;
+  font-size: var(--text-2xl);
+  line-height: 1.08;
+  color: var(--color-navy);
+  margin: 0 0 var(--space-5);
+  letter-spacing: -0.01em;
+}
+[data-theme="dark"] .article-title { color: var(--color-text); }
+
+.article-meta {
+  display: flex;
+  flex-wrap: wrap;
+  gap: var(--space-3);
+  align-items: center;
+  font-family: var(--font-body);
+  font-size: var(--text-sm);
+  color: var(--color-text-light);
+  border-top: 1px solid var(--color-border);
+  border-bottom: 1px solid var(--color-border);
+  padding: var(--space-4) 0;
+}
+.article-meta .dot { color: var(--color-gold-faint); }
+
+.article-lead {
+  font-family: var(--font-display);
+  font-weight: 400;
+  font-style: italic;
+  font-size: var(--text-lg);
+  line-height: 1.5;
+  color: var(--color-text-mid);
+  margin: var(--space-10) 0 var(--space-8);
+}
+
+.prose { font-family: var(--font-body); }
+.prose p {
+  font-size: var(--text-base);
+  line-height: 1.78;
+  color: var(--color-text-mid);
+  margin: 0 0 var(--space-6);
+}
+.prose h2 {
+  font-family: var(--font-display);
+  font-weight: 500;
+  font-size: var(--text-xl);
+  line-height: 1.15;
+  color: var(--color-navy);
+  margin: var(--space-12) 0 var(--space-4);
+}
+[data-theme="dark"] .prose h2 { color: var(--color-text); }
+.prose h3 {
+  font-family: var(--font-sc);
+  font-size: var(--text-sm);
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+  color: var(--color-green);
+  margin: var(--space-8) 0 var(--space-3);
+}
+.prose strong { color: var(--color-text); font-weight: 600; }
+.prose em { font-style: italic; }
+.prose a { color: var(--color-green); text-decoration: underline; text-underline-offset: 2px; }
+
+.prose ul, .prose ol { margin: 0 0 var(--space-6); padding-left: var(--space-6); }
+.prose li { font-size: var(--text-base); line-height: 1.7; color: var(--color-text-mid); margin-bottom: var(--space-2); }
+
+.prose blockquote {
+  margin: var(--space-8) 0;
+  padding: var(--space-2) 0 var(--space-2) var(--space-6);
+  border-left: 2px solid var(--color-green);
+  font-family: var(--font-display);
+  font-style: italic;
+  font-size: var(--text-lg);
+  line-height: 1.45;
+  color: var(--color-text);
+}
+
+.article-rule {
+  display: flex; align-items: center; justify-content: center;
+  gap: var(--space-3); margin: var(--space-12) 0;
+}
+.article-rule span { height: 1px; width: 60px; background: var(--color-hairline); }
+.article-rule svg { width: 10px; height: 10px; color: var(--color-gold-faint); }
+
+/* ── Pull-stats row ── */
+.stat-row {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
+  gap: var(--space-6);
+  margin: var(--space-10) 0;
+  padding: var(--space-8) 0;
+  border-top: 1px solid var(--color-border);
+  border-bottom: 1px solid var(--color-border);
+}
+.stat { text-align: center; }
+.stat-num {
+  font-family: var(--font-display);
+  font-weight: 500;
+  font-size: var(--text-xl);
+  color: var(--color-green);
+  line-height: 1;
+}
+.stat-label {
+  font-family: var(--font-body);
+  font-size: var(--text-xs);
+  color: var(--color-text-muted);
+  margin-top: var(--space-2);
+  letter-spacing: 0.02em;
+}
+
+/* ── Figures / charts ── */
+.article-figure { margin: var(--space-10) 0; }
+.article-figure svg { width: 100%; height: auto; display: block; }
+.article-figure figcaption {
+  font-family: var(--font-body);
+  font-size: var(--text-sm);
+  color: var(--color-text-light);
+  text-align: center;
+  margin-top: var(--space-4);
+  font-style: italic;
+}
+
+/* ── Photo gallery ── */
+.photo-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(220px, 1fr));
+  gap: var(--space-4);
+  margin: var(--space-10) 0;
+}
+.photo-grid figure { margin: 0; }
+.photo-grid img { width: 100%; height: 240px; object-fit: cover; border-radius: var(--radius-sm); display: block; }
+.photo-grid figcaption { font-family: var(--font-body); font-size: var(--text-xs); color: var(--color-text-light); margin-top: var(--space-2); }
+
+.article-footer-note {
+  margin-top: var(--space-16);
+  padding-top: var(--space-8);
+  border-top: 1px solid var(--color-border);
+  font-family: var(--font-body);
+  font-size: var(--text-sm);
+  color: var(--color-text-muted);
+  font-style: italic;
+}

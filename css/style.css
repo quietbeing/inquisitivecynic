@@ -887,3 +887,9 @@ a {
     transition-duration: 0.01ms !important;
   }
 }
+
+/* ─── Field Notes: clickable article cards ─── */
+a.note-card { text-decoration: none; color: inherit; display: block; }
+a.note-card .note-title { transition: color var(--transition); }
+a.note-card:hover .note-title { color: var(--color-green); }
+a.note-card .note-cta-hint { color: var(--color-green); font-style: normal; }
