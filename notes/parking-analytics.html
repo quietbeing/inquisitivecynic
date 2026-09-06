@@ -1,0 +1,209 @@
+<!DOCTYPE html>
+<html lang="en" data-theme="light">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>How to Grow Parking Revenue Without Adding a Single Space — The InquisitiveCynic</title>
+  <meta name="description" content="Parking looks like a capacity business. It almost never is. A method for finding the revenue that's already there — without exposing a single institution's numbers. By Paul Reeves." />
+  <meta property="og:title" content="How to Grow Parking Revenue Without Adding a Single Space" />
+  <meta property="og:description" content="The revenue was already there. The work was learning to see it." />
+  <meta property="og:type" content="article" />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,500;0,600;1,300;1,400;1,500;1,600&family=EB+Garamond:ital,wght@0,400;0,500;1,400;1,500&family=Cormorant+SC:wght@300;400;500&display=swap" rel="stylesheet" />
+  <link rel="icon" href="../images/favicon.svg" type="image/svg+xml" />
+  <link rel="stylesheet" href="../css/style.css" />
+  <link rel="stylesheet" href="../css/article.css" />
+  <style>
+    /* Conceptual lever diagram — no data, theme-aware via site tokens */
+    .lever-grid {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: var(--space-6) var(--space-8);
+      margin-top: var(--space-2);
+    }
+    @media (max-width: 480px) { .lever-grid { grid-template-columns: 1fr; } }
+    .lever { border-top: 2px solid var(--color-green); padding-top: var(--space-3); }
+    .lever-num { font-family: var(--font-sc); color: var(--color-gold); font-size: var(--text-sm); letter-spacing: 0.12em; }
+    .lever h4 {
+      font-family: var(--font-display); font-style: italic; font-weight: 500;
+      font-size: var(--text-lg); color: var(--color-navy);
+      margin: var(--space-1) 0 var(--space-2);
+    }
+    [data-theme="dark"] .lever h4 { color: var(--color-text); }
+    .lever p { font-family: var(--font-body); font-size: var(--text-sm); color: var(--color-text-muted); line-height: 1.6; margin: 0; }
+  </style>
+</head>
+<body>
+
+  <header class="site-header" id="top">
+    <div class="header-inner">
+      <a href="../index.html" class="logo-link" aria-label="The InquisitiveCynic home">
+        <div class="logo-wordmark">
+          <span class="logo-the">The</span>
+          <span class="logo-name">InquisitiveCynic</span>
+        </div>
+      </a>
+      <nav class="site-nav" role="navigation" aria-label="Main navigation">
+        <a href="../index.html#about">About</a>
+        <a href="../index.html#focus">Focus</a>
+        <a href="../index.html#field-notes">Field Notes</a>
+        <a href="../index.html#connect">Connect</a>
+      </nav>
+      <button class="theme-toggle" data-theme-toggle aria-label="Switch to dark mode">
+        <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z"/></svg>
+      </button>
+    </div>
+  </header>
+
+  <main>
+    <article class="article-wrap">
+      <a href="../index.html#field-notes" class="article-back">
+        <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><path d="M19 12H5M12 19l-7-7 7-7"/></svg>
+        Field Notes
+      </a>
+
+      <header class="article-header">
+        <p class="article-eyebrow">Parking Analytics</p>
+        <h1 class="article-title">How to Grow Parking Revenue Without Adding a Single Space</h1>
+        <div class="article-meta">
+          <span>Paul Reeves</span>
+          <span class="dot" aria-hidden="true">◆</span>
+          <span>September 2026</span>
+          <span class="dot" aria-hidden="true">◆</span>
+          <span>7 min read</span>
+        </div>
+      </header>
+
+      <p class="article-lead">
+        Parking looks like a real-estate business — more spaces, more money. Almost everything
+        interesting about it begins the moment you stop believing that.
+      </p>
+
+      <div class="prose">
+        <p>
+          A parking operation presents itself as a capacity problem. The lots are full, the complaints
+          are about not finding a space, and the obvious answer is always to build more. But capacity is
+          the most expensive and least available lever there is, and in most institutions it is also the
+          wrong one. The revenue in a parking operation is rarely trapped behind a shortage of spaces. It
+          is trapped behind a shortage of good questions.
+        </p>
+        <p>
+          I learned this running campus parking before I ever ran a fleet, and it turned out to be the
+          same lesson in a different uniform: the data was already there, and the work was learning to see
+          it. What follows is the method, not the numbers. The specific figures belong to the institution
+          that owns them — and part of doing this work well is knowing which things travel and which things
+          stay home. The method travels.
+        </p>
+
+        <h2>Where parking revenue actually lives</h2>
+        <p>
+          Think of parking revenue not as a single number but as the product of four levers, none of which
+          require pouring a single new slab of concrete. Move any of them and the total moves — usually far
+          more than another lot ever would.
+        </p>
+
+        <figure class="article-figure">
+          <div class="lever-grid">
+            <div class="lever">
+              <span class="lever-num">I</span>
+              <h4>Price</h4>
+              <p>What you charge — and, more importantly, how it flexes by time of day, by demand, and by who is parking.</p>
+            </div>
+            <div class="lever">
+              <span class="lever-num">II</span>
+              <h4>Utilization</h4>
+              <p>How hard each space works. The same lot can hold a little revenue or a lot, depending on turnover and mix.</p>
+            </div>
+            <div class="lever">
+              <span class="lever-num">III</span>
+              <h4>Leakage</h4>
+              <p>Revenue you should collect but don't — the quiet lever, and usually the largest one nobody is watching.</p>
+            </div>
+            <div class="lever">
+              <span class="lever-num">IV</span>
+              <h4>Mix</h4>
+              <p>The blend of permit, visitor, event, and transient use — each with a very different value per space.</p>
+            </div>
+          </div>
+          <figcaption>The four levers that move parking revenue — none of them require a single new space.</figcaption>
+        </figure>
+
+        <h2>Leakage is the quiet one</h2>
+        <p>
+          Of the four, leakage is the one that rewards analytics the most, because it is invisible until you
+          go looking. Every parking operation loses revenue it was entitled to — through gates that don't
+          reconcile, validations that aren't tracked, cash that isn't controlled, exceptions that quietly
+          become the rule. None of it shows up as a complaint. Nobody calls to report that they parked for
+          free. It shows up only as a gap between the revenue an operation should produce and the revenue it
+          does, and closing that gap is often worth more than any pricing change — with none of the political
+          cost.
+        </p>
+        <p>
+          Finding leakage is not a technology problem. It is a reconciliation habit: comparing what the
+          system says happened against what actually happened, every day, until the discrepancies have
+          nowhere to hide. That is analytics in its least glamorous and most valuable form.
+        </p>
+
+        <blockquote>
+          Nobody calls to report that they parked for free. Leakage is the revenue that only a question will
+          ever find.
+        </blockquote>
+
+        <h2>Pricing is a behavior problem, not a math problem</h2>
+        <p>
+          The instinct with pricing is to model it — build the elasticity curve, find the optimum, publish
+          the new rate. The math matters, but it is the easy part. The hard part is that every price is also
+          a signal, and every increase is a conversation with people who experience it as something being
+          taken from them. The analytics tell you what the market will bear; they do not tell you how to
+          bring people along, or which increase buys efficiency and which one just buys resentment. Good
+          parking pricing lives exactly where the data ends and the judgment begins.
+        </p>
+
+        <h2>Analytics is a question, not a dashboard</h2>
+        <p>
+          If there is one idea that connects parking to fleets to any operation I have ever run, it is this:
+          a dashboard shows you what happened; it will never tell you what to ask. The operations that get
+          more from the same footprint are not the ones with the most data. They are the ones willing to ask
+          the uncomfortable question — <em>where is the revenue we should be seeing and aren't?</em> — and
+          then to act on the answer even when it implicates a process someone built and defends.
+        </p>
+        <p>
+          That is how a parking operation grows without adding a space: not by building, but by seeing. The
+          spaces were always producing more than the ledger showed. The work was closing the distance
+          between the two — and having the discipline to keep it closed after the project was declared done.
+        </p>
+
+        <div class="article-rule" aria-hidden="true">
+          <span></span>
+          <svg viewBox="0 0 16 16" fill="currentColor"><polygon points="8,0 16,8 8,16 0,8"/></svg>
+          <span></span>
+        </div>
+
+        <p class="article-footer-note">
+          A note on the numbers: the specific results of this work belong to the institution where it
+          happened, so you won't find them here — good analytics work includes knowing what not to publish.
+          The method, though, is portable, and I'm always glad to talk shop.
+          <a href="../index.html#connect">Get in touch</a>.
+        </p>
+      </div>
+    </article>
+  </main>
+
+  <footer class="site-footer" role="contentinfo">
+    <div class="footer-inner">
+      <div class="footer-pillars">
+        <span class="footer-pillar">Operations Leadership</span>
+        <span class="footer-pillar-sep" aria-hidden="true">·</span>
+        <span class="footer-pillar">Fleet &amp; Business Intelligence</span>
+        <span class="footer-pillar-sep" aria-hidden="true">·</span>
+        <span class="footer-pillar">Applied AI</span>
+      </div>
+      <p class="footer-sub">Paul Reeves · <a href="mailto:paul@inquisitivecynic.com">paul@inquisitivecynic.com</a></p>
+      <p class="footer-copy">© 2026 Paul Reeves. All rights reserved.</p>
+    </div>
+  </footer>
+
+  <script src="../js/main.js"></script>
+</body>
+</html>
