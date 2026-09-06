@@ -893,3 +893,7 @@ a.note-card { text-decoration: none; color: inherit; display: block; }
 a.note-card .note-title { transition: color var(--transition); }
 a.note-card:hover .note-title { color: var(--color-green); }
 a.note-card .note-cta-hint { color: var(--color-green); font-style: normal; }
+
+/* ─── Dark mode removed — light theme only ─── */
+:root { color-scheme: light; }
+.theme-toggle { display: none !important; }
